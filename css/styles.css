@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial,  sans-serif;
+    overflow-x: hidden;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 1241px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header {
+    background-color: #000;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header__wrap a {
+    color: #ffff90c9;
+}
+
+.header__title {
+    color: #ffff90c9;
+}
+
+.form__wrap {
+    display: flex;
+}
+
+.languages {
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.option {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input__box {
+    position: relative;
+    display: flex;
+}
+
+.input {
+    width: 100%;
+    max-width: 324px;
+    margin-bottom: 11px;
+    padding: 11px;
+    padding-right: 40px;
+    border-radius: 5px;
+}
+
+.input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.btn {
+    position: absolute; 
+    top: 9px;
+    right: 23px;
+    background-color: transparent;
+    border: 0;
+    background-image: url("../images/search.png");
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    cursor: pointer;
+}
+
+select {
+    border-right: 7px solid #efefef;
+}
+
+.browse-section {
+    padding-top: 55px;
+}
+.languages__list-box {
+    position: relative;
+    margin: 277px auto;
+}
+
+.title {
+    color: #5d5c5c
+}
+
+.prev__box,
+.next__box {
+    position: absolute;
+    left: -178%;
+    bottom: 99px;
+    z-index: 3;
+    display: block;
+    width: 182%;
+    height: 172px;
+    box-shadow: 38px -20px 59px #fff;
+    background-color: rgb(255, 255, 255);
+}
+
+.next__box {
+    left: 97%;
+    width: 320%;
+    box-shadow: -38px 20px 23px #fff;
+}
+
+.previous__lang, .next__lang {
+    position: absolute;
+    top: 38%;
+    right: 7px;
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    border:0;
+    background-image: url("../images/nextPrevious.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size:contain;
+    cursor: pointer;
+}
+
+.next__lang {
+    top: 32%;
+    right: 99%;
+    transform: rotate(180deg);
+}
+
+.languages__list {
+    position: absolute;
+    bottom: 132px;
+    display: flex;
+    justify-content: center;
+    padding: 0 49px;
+    transition: all .3s ease-in-out;
+}
+
+.language__item {
+    margin-right: 25px;
+    width: 200px;
+    height: 100px;
+    background-image: url("../images/languages/accadian.png");
+    background-repeat: no-repeat;
+    background-size:200px 100px;
+    border-radius: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.language__item:nth-child(2) {
+    background-image: url("../images/languages/arabic.jpeg");
+}
+
+.language__item:nth-child(3) {
+    background-image: url("../images/languages/chinese.jpg");
+}
+
+.language__item:nth-child(4) {
+    background-image: url("../images/languages/latin.jpg");
+}
+
+.language__item:nth-child(5) {
+    background-image: url("../images/languages/danish.jpg");
+}
+
+.language__item:nth-child(6) {
+    background-image: url("../images/languages/english.jpg");
+    background-position: center center;
+    background-size:100% 200px;
+}
+
+.language__item:nth-child(7) {
+    background-image: url("../images/languages/french.png");
+}
+
+.language__item:nth-child(8) {
+    background-image: url("../images/languages/english.jpg");
+    background-position: center center;
+    background-size:100% 200px;
+}
+
+.language__item:nth-child(9) {
+    background-image: url("../images/languages/german.png");
+}
+
+.language__item:nth-child(10) {
+    background-image: url("../images/languages/greek.jpg");
+}
+
+.language__item:nth-child(11) {
+    background-image: url("../images/languages/hebrew.jpg");
+}
+
+.language__item:nth-child(12) {
+    background-image: url("../images/languages/icelandic.jpg");
+}
+
+.language__item:nth-child(13) {
+    background-image: url("../images/languages/italian.png");
+}
+
+.language__item:nth-child(14) {
+    background-image: url("../images/languages/japanese.png");
+}
+
+.language__item:nth-child(15) {
+    background-image: url("../images/languages/norwegian.jpg");
+}
+
+.language__item:nth-child(16) {
+    background-image: url("../images/languages/old-norse.jpg");
+}
+
+.language__item:nth-child(17) {
+    background-image: url("../images/languages/persian.png");
+}
+
+.language__item:nth-child(18) {
+    background-image: url("../images/languages/portuguese.png");
+}
+
+.language__item:nth-child(19) {
+    background-image: url("../images/languages/russian.png");
+}
+
+.language__item:nth-child(20) {
+    background-image: url("../images/languages/sanskrit.png");
+}
+
+.language__item:nth-child(21) {
+    background-image: url("../images/languages/spanish.jpg");
+}
+
+.language__item:nth-child(22) {
+    background-image: url("../images/languages/swedish.png");
+}
+
+
+.language__txt {
+    position: absolute;
+    top:10px;
+    width: 3.97%;
+    font-weight: bold;
+    background-color: #000000a6;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.genres__list {
+    position: absolute;
+    top:100px ;
+    display: flex;
+    justify-content: center;
+    padding: 0 49px;
+    transition: all 1s ease-in-out;
+}
+
+.genre__item {
+    margin-right: 25px;
+    width: 220px;
+    height: 200px;
+    background-image: url("../images/genres/action.jpg");
+    background-repeat: no-repeat;
+    background-size:220px 200px;
+    border-radius: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.genre__item:nth-child(2) {
+    background-image: url("../images/genres/adventure.png");
+}
+
+.genre__item:nth-child(3) {
+    background-image: url("../images/genres/autobiography.jpg");
+}
+
+.genre__item:nth-child(4) {
+    background-image: url("../images/genres/childrens.jpg");
+}
+
+.genre__item:nth-child(5) {
+    background-image: url("../images/genres/comedy.jpg");
+}
+
+.genre__item:nth-child(6) {
+    background-image: url("../images/genres/death-metal.jpg");
+}
+
+.genre__item:nth-child(7) {
+    background-image: url("../images/genres/drama.jpg");
+}
+
+.genre__item:nth-child(8) {
+    background-image: url("../images/genres/epic-poem.jpg");
+}
+
+.genre__item:nth-child(9) {
+    background-image: url("../images/genres/essay.jpg");
+}
+
+.genre__item:nth-child(10) {
+    background-size: 242px 226px;
+    /* background-size: cover; */
+    background-position: center center;
+    background-image: url("../images/genres/fantasy.jpg");
+}
+
+.genre__item:nth-child(11) {
+    background-image: url("../images/genres/fiction.jpeg");
+}
+
+.genre__item:nth-child(12) {
+    background-image: url("../images/genres/historical.jpg");
+}
+
+.genre__item:nth-child(13) {
+    background-image: url("../images/genres/horror.jpeg");
+}
+
+.genre__item:nth-child(14) {
+    background-image: url("../images/genres/humorious.jpg");
+}
+
+.genre__item:nth-child(15) {
+    background-image: url("../images/genres/literary.jpg");
+}
+
+.genre__item:nth-child(16) {
+    background-image: url("../images/genres/modern-literature.jpg");
+}
+
+.genre__item:nth-child(17) {
+    background-image: url("../images/genres/modern-tragedy.jpg");
+}
+
+.genre__item:nth-child(18) {
+    background-image: url("../images/genres/mystery.jpg");
+}
+
+.genre__item:nth-child(19) {
+    background-image: url("../images/genres/nautical-fiction.jpg");
+}
+
+.genre__item:nth-child(20) {
+    background-image: url("../images/genres/non-readable.png")
+}
+
+.genre__item:nth-child(21) {
+    background-image: url("../images/genres/novel.jpg")
+}
+
+.genre__item:nth-child(22) {
+    background-image: url("../images/genres/novella.jpg");
+}
+
+.genre__item:nth-child(23) {
+    background-image: url("../images/genres/philosophy-fiction.jpg");
+}
+
+.genre__item:nth-child(24) {
+    background-image: url("../images/genres/poetry.jpg");
+}
+
+.genre__item:nth-child(25) {
+    background-image: url("../images/genres/political-fiction.jpg");
+}
+
+.genre__item:nth-child(26) {
+    background-image: url("../images/genres/post-apocalytic.jpg");
+}
+
+.genre__item:nth-child(27) {
+    background-image: url("../images/genres/physoligical.webp");
+}
+
+.genre__item:nth-child(28) {
+    background-image: url("../images/genres/romance.jpg");
+}
+
+.genre__item:nth-child(29) {
+    background-image: url("../images/genres/science-fiction.jpg");
+}
+
+.genre__item:nth-child(30) {
+    background-image: url("../images/genres/short-story.jpg");
+}
+
+.genre__item:nth-child(31) {
+    background-image: url("../images/genres/southern-gothic.jpg");
+}
+
+.genre__item:nth-child(32) {
+    background-image: url("../images/genres/thriller.jpg");
+}
+
+.genre__item:nth-child(33) {
+    background-image: url("../images/genres/tragedy.jpg");
+}
+
+
+
+
+
+.prev__box--active,
+.next__box--active {
+    position: absolute;
+    left: -178%;
+    top: 58px;
+    z-index: 3;
+    display: block;
+    width: 182%;
+    height: 283px;
+    box-shadow: 40px -10px 37px #fff;
+    background-color: rgb(255, 255, 255);
+}
+
+.next__box--active {
+    left: 97%;
+    width: 320%;
+    box-shadow: -38px 20px 23px #fff;
+}
+
+.previous__genre, 
+.next__genre {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    border:0;
+    background-image: url("../images/nextPrevious.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size:contain;
+    cursor: pointer;
+}
+
+.next__genre {
+    top: 47%;
+    right: 99%;
+    transform: rotate(180deg);
+}
+
+.genre__txt {
+    top: 40%;
+    width: 2.69%;
+}
+
+.popular {
+    padding: 155px 0;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 43%; */
+    
+}
+
+.book__item {
+    width: 180px;
+    margin-bottom: 30px;
+}
+
+
+.book__item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.book__image {
+    border-radius: 10px;
+    box-shadow: 0px 4px 14px 1px #00000070;
+}
+
+.bookmark-button {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    background-image: url("../images/bookmark.png");
+    background-size: 45px 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.article {
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    background-image: url("../images/quote.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-size: 1200 600;
+    background-position: center;
+}
+
+.book__title {
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.book__release,
+.book__page,
+.book__author,
+.all {
+    color: #c0c0c0;
+}
+
+.title--active {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.footer__box {
+display: flex;
+align-items: center;
+}
+
+.footer__box p {
+    text-align: center;
+    color: #ffff90c9;
+}
+

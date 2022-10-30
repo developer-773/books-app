@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Books</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="./images/logo.png">
+</head>
+<body oncontextmenu="return false">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrap">
+        <a href="./index.html">
+          <img src="./images/logo.png" width="295" height="147" alt="">
+        </a>
+        <h1 class="header__title">Get online books !</h1>
+        <a class="myBooks" href="#">My books</a> 
+        <form class="form">
+          <div class="input__box">
+            <input class="input" type="search" placeholder="Search">
+            <button class="btn"></button>
+          </div>
+          <select class="languages">
+            <!-- <option class="option" value="languages" hidden>Languages</option> -->
+            <option class="option" value="All">All</option>
+          </select>
+          <select class="languages" id="sort">
+            <!-- <option class="option" hidden>Sort by</option> -->
+            <option class="option" value="authors">Authors</option>
+            <option class="option" value="sm-books">Small books</option>
+            <option class="option" value="xl-books">Big books</option>
+            <option class="option" value="a-z">A-Z</option>
+            <option class="option" value="z-a">Z-A</option>
+          </select> 
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article>
+      <div class="article"></div>
+    </article>
+    <section class="browse-section"> 
+      <div class="container">
+        <h3 class="title">BROWSE LANGUAGES</h3>
+        <div class="languages__list-box">
+          <div class="prev__box">
+            <button class="previous__lang"></button>
+          </div>
+          <div class="next__box">
+            <button class="next__lang"></button>
+          </div>
+          <ul class="languages__list">
+            
+          </ul>    
+          <h3 class="title">BROWSE GENRES</h3>
+          <div class="prev__box--active">
+            <button class="previous__genre"></button>
+          </div>
+          <div class="next__box--active">
+            <button class="next__genre"></button>
+          </div>
+          <ul class="genres__list">
+            
+          </ul>   
+        </div> 
+      </div>
+    </section>
+    <section class="saved">
+      <ul class="saved__books">
+
+      </ul>
+    </section>
+    <section class="popular">
+      <div class="container">
+        <div>   
+          <h3 class="title title--active">POPULAR CLASSICS</h3>
+          <a class="all" href="#"> (VIEW ALL)</a>
+        </div>
+        <ul class="list">
+          
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer__box">
+        <a href="./index.html">
+          <img src="./images/logo.png" width="165" height="99" alt="">
+        </a>
+        <p>© 2022 developer_773. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <!-- TEMPLATES -->
+  <template id="template">
+    <li class="book__item">
+      <div class="contents__box">
+        <button class="bookmark-button"></button>
+        <a class="book__description" href="">
+          <img class="book__image" src="" width="180" height="240" alt="">
+          <h4 class="book__title"></h4>
+        </a>
+        <span class="book__author"></span>
+        <span class="book__release"></span>
+        <div class="book__mini-box">
+          <span class="book__page"></span>
+          <span class="book__language"></span>
+        </div>
+      </div>
+    </li>
+  </template>
+ 
+  <!-- <script src="/js/books.js"></script> -->
+ <script src="./js/booksModified.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
