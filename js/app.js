@@ -18,6 +18,7 @@ let value = 0;
 
 
 
+
 function renderLanguagesAndGenres() {
     books.forEach(book => {
         if(booksLanguages.indexOf(book.language) === -1) {
@@ -28,8 +29,6 @@ function renderLanguagesAndGenres() {
     }) 
     booksLanguages.sort();
 }
-
-
 
 
 function renderLanguagesOption() {
@@ -52,7 +51,7 @@ function renderLanguagesOption() {
     elLanguagesSelect.appendChild(newSelectFragment);
 }
 
-
+// Generate unique genres
 books.forEach(item => {
     
     let genre = item.genre;
@@ -64,7 +63,6 @@ books.forEach(item => {
     
     booksGenres.sort();
 });
-
 
 
 
@@ -85,7 +83,7 @@ function renderGenresItems() {
 
 
 
-
+// Render
 function renderBooks(reading) {
     elList
     
@@ -103,18 +101,6 @@ function renderBooks(reading) {
     }
     elList.appendChild(BooksFragment);   
 }
-
-
-
-// let genree = document.querySelectorAll(".genre__txt");
-// let zero = Array.from(genree)
-// let result = zero.map(item => {
-//     return item.innerHTML;
-// })
-
-// let resultt = result.join();
-
-// console.log(result.join())
 
 
 
@@ -143,119 +129,8 @@ function sorting(sortedList, sorted) {
     } 
 }
 
-function genres(params) {
-    
-    
-    // books.forEach(lang => {
-    //     console.log(lang.link)
-    // })
-    
-    /* 
-    0 - Historical Fiction
-    1 - Literary fiction, Poetry
-    2 - Literary fiction, Poetry
-    3 - religious text
-    4 - Romance, Fiction
-    5 - Romance, Fiction
-    6 - Fiction
-    7 - fiction
-    8 - fantasy
-    9 - Romance, Tragedy
-    10 - Horror, Thriller
-    11 - Action, Adventure
-    12 - Adventure
-    13 - Literary fiction
-    14 - Literal fiction, Romance
-    15 - Novel, Political Fiction
-    16 - Novel
-    17 - Novel
-    18 - Novel, Literal Fiction
-    19 - Novel, Philosophical Fiction
-    20 - Novel
-    21 - Death Metal
-    22 - Novel, Philosophical Fiction
-    23 - Novel, Historical Fiction
-    24 - Novel, Literal Fiction
-    25 - Tragedy
-    26 - Novel, Historical fiction
-    27 - Novel, Southern Gothic
-    28 - Novel, Literaly Fiction
-    29 - Novel, Literaly Fiction
-    30 - Poetry
-    31 - Novel, Fantasy
-    32 - Novel, Romance, Literaly Fiction
-    33 - Tragedy
-    34 - Novel, Literaly Fiction
-    35 - Historical Fiction, Novel, Political Fiction
-    36 - Literary Fiction
-    37 - Action, Science Fiction, Thriller, Adventure
-    38 - Nautical Fiction, Novel
-    39 - Poetry
-    40 - Poerty
-    41 - Modern Tragedy
-    42 - Literary Fiction, Novel
-    43 - Short Story, Literaly Fiction
-    44 - Philosophical Fiction, Novel
-    45 - Comedy, Novel, Philosophical Fiction, Political Fiction
-    46 - Drama 
-    47 - Literary Fiction, Novel
-    48 - Literary Fiction, Novel
-    49 - Fictional Autobiography
-    50 - Novel, Literary Fiction
-    51 - Poetry
-    52 - Physological Fiction
-    53 - Chidldren's, Literary Fiction
-    54 - Short Story
-    55 - Literary Fiction, Novel
-    56 - Literary Fiction, Novel
-    57 - Literary Fiction, Novel, Modern Literature
-    58 - Nautical Fiction, Adventure
-    59 - Essay
-    60 - Literary Fiction, Novel
-    61 - Literary Fiction, Novel
-    62 - Historical Fiction, Novel
-    63 - Literary Fiction, Novel
-    64 - Historical Fiction, Novel, Philosophical Fiction
-    65 - Novel, Literaly Fiction
-    66 - Science Fiction, Political Fiction
-    67 - Poetry
-    68 - Novel, Autobiography
-    69 - Literary Fiction, Mystery
-    70 - Philosophical Fiction, Fictional Autobiography
-    71 - Literaly Fiction
-    72 - Literary Fiction, Novel
-    73 - Poetry
-    74 - Historical Fiction, Novel
-    75 - Poetry
-    76 - Literary Fiction, Novel
-    77 - Post-apocalytic
-    78 - Tragedy, Drama
-    79 - Tragedy
-    80 - Tragedy
-    81 - Tragedy
-    82 - Novel, Psychological
-    83 - Novel, Humorious Fiction
-    84 - Novel, Literary Fiction
-    85 - Novel, Chidldren's, Science Fiction, Adventure, Fantasy
-    86 - Novel, Historical Fiction, Romance, Philosophical Fiction
-    87 - Novel, Fiction
-    88 - Fiction, Novella
-    89 - Novel, Chidldren's, Adventure
-    90 - Ramyana
-    91 - Poetry, Fantasy
-    92 - Mhbhrt
-    93 - Poetry
-    94 - Novel, Psychological Fiction
-    95 - Novel, Fiction
-    96 - Historical Fiction, Novel, Philosophical Fiction
-    97 - Novel, Literaly Fiction
-    98 - Novel, Fiction
-    99 - Fiction
-    
-    
-    */
-    
-}
+
+
 elForm.addEventListener("submit", evt => {
     evt.preventDefault();
     const search = new RegExp(elInput.value.trim(), 'gi')
@@ -337,10 +212,7 @@ elGenresList.addEventListener("click", evt => {
 
 renderGenresItems()
 renderLanguagesAndGenres()
-
 renderLanguagesOption()
-
-
 renderBooks(books.slice(75, 83));
 
 
