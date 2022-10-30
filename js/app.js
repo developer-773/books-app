@@ -87,7 +87,7 @@ function renderGenresItems() {
 
 
 function renderBooks(reading) {
-elList
+    elList
     
     for (let i = 0; i < reading.length; i++) {   
         let BooksCloned = elTemplates.cloneNode(true);
@@ -103,10 +103,7 @@ elList
     }
     elList.appendChild(BooksFragment);   
 }
-renderGenresItems()
-renderLanguagesAndGenres()
 
-renderLanguagesOption()
 
 
 // let genree = document.querySelectorAll(".genre__txt");
@@ -123,7 +120,7 @@ renderLanguagesOption()
 
 function showSearchBooks(param) {
     return books.filter(item => {
-        const res = item.title.match(param) && (elLanguagesSelect.value === "All" || item.language.includes(elLanguagesSelect.value)) || item.language.includes(param);
+        const res = item.title.match(param) && (elLanguagesSelect.value === "All" || item.language.includes(elLanguagesSelect.value)) || item.language.includes(param) || item.genre.includes(param);
         return res;
     })
 }
@@ -275,7 +272,7 @@ elForm.addEventListener("submit", evt => {
 
 elBrowsesSection.addEventListener("click", evt => {
     evt.preventDefault();
-
+    
     
     // Carousel buttons 
     if (evt.target.classList.contains("next__lang") ) {
@@ -313,15 +310,48 @@ elBrowsesSection.addEventListener("click", evt => {
     }
 });
 
+
+
 elLanguagesList.addEventListener("click", evt=> {
     evt.preventDefault();
+    elList.innerHTML = "";
     if (evt.target.classList.contains("language__txt")) {
         searchBooksFilter = showSearchBooks(evt.target.innerHTML)
-        renderBooks(searchBooksFilter, );
+        renderBooks(searchBooksFilter);
     }else {
         console.log("No")
     }
 });
+
+
+elGenresList.addEventListener("click", evt => {
+    evt.preventDefault();
+    
+    elList.innerHTML = "";
+    if (evt.target.classList.contains("genre__txt")) {
+        searchBooksFilter = showSearchBooks(evt.target.innerHTML)
+        renderBooks(searchBooksFilter)
+    }
+});
+
+
+renderGenresItems()
+renderLanguagesAndGenres()
+
+renderLanguagesOption()
+
+
+renderBooks(books.slice(75, 83));
+
+
+elViewAll.addEventListener("click", evt => {
+    evt.preventDefault();
+    renderBooks(books)
+});
+
+
+
+
 
 document.onkeydown = function (e) {
     if (event.keyCode == 123) {
@@ -370,12 +400,6 @@ document.onkeydown = function (e) {
 
 
 
-renderBooks(books.slice(75, 83), elList);
-
-elViewAll.addEventListener("click", evt => {
-    evt.preventDefault();
-    renderBooks(books)
-});
 
 
 
