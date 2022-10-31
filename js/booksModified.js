@@ -1505,7 +1505,8 @@ const books = [
         "title": "Anna Karenina",
         "year": 1877,
         "genre": [
-            "Non-readable"
+            "Novel",
+            "Fiction"
         ]
     },
     {
@@ -1538,7 +1539,8 @@ const books = [
         "title": "The Adventures of Huckleberry Finn",
         "year": 1884,
         "genre": [
-            "Non-readable"
+            "Novel",
+            "Fiction"
         ]
     },
     {
@@ -1554,7 +1556,7 @@ const books = [
         "title": "Ramayana",
         "year": -450,
         "genre": [
-            "Poetry"
+            "Non-readable"
         ]
     },
     {
@@ -1587,8 +1589,7 @@ const books = [
         "title": "Mahabharata",
         "year": -700,
         "genre": [
-            "Novel",
-            "Fiction"
+            "Non-readable"
         ]
     },
     {
