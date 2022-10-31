@@ -218,6 +218,7 @@ renderBooks(books.slice(75, 83));
 
 elViewAll.addEventListener("click", evt => {
     evt.preventDefault();
+    elList.innerHTML = "";
     renderBooks(books)
 });
 

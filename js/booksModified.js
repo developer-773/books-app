@@ -44,7 +44,7 @@ const books = [
         "pages": 928,
         "title": "The Divine Comedy",
         "year": 1315,
-        "genre": ["Novel"]
+        "genre": ["Epic-Poem"]
     },
     {
         "id": [
